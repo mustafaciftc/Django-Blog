@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<img src="media/blog-684748_640.jpg" alt="img" height='600px' width='100%' margin-top= '0px' >
+
+
+<p>
+    {% if request.user.is_authenticated %}
+            Logged in, {{request.user.username}}
+    {% else %}
+            Logged out
+    {% endif %}
+
+</p>
+      
+{% endblock %}
